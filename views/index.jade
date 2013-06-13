@@ -8,10 +8,4 @@ block content
       li
         b= calendar.summary
         p= calendar.description
-        a(href='/view?calendarId' + calendar.id) View
-
-
-
-
-
-
+        a(href='/events?calendarId=' + calendar.id) View

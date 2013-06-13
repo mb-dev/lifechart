@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  a(href='/').
+   Home
+  ul
+    each event in events
+      li
+        b= event.summary
+        - if(event.start.dateTime)
+          .date=event.start.dateTime
+        - else
+          .date=event.start.date

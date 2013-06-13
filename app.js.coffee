@@ -27,6 +27,7 @@ if ('development' == app.get('env'))
   app.use(express.errorHandler())
 
 app.get('/', indexRoute.index)
+app.get('/events', indexRoute.events)
 app.get('/users', userRoute.list)
 app.get('/auth', userRoute.auth)
 app.get('/oauth2callback', userRoute.authcallback)
