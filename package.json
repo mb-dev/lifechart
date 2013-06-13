@@ -1,0 +1,16 @@
+{
+  "name": "lifechart",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js.coffee"
+  },
+  "dependencies": {
+    "express": "3.2.6",
+    "coffee-script": "*",
+    "googleapis": "*",
+    "nodemon": "*",
+    "jade": "*",
+    "mongoose": "*"
+  }
+}

@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  a.btn.btn-primary(href='/auth').
+   Authenticate with Google
+  ul
+    each calendar in calendars
+      li
+        b= calendar.summary
+        p= calendar.description
+        a(href='/view?calendarId' + calendar.id) View
+
+
+
+
+
+
