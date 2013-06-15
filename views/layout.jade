@@ -6,4 +6,15 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block content
-    script(src='/javascripts/bootstrap.js')
+    script
+      ENV = {
+        FORCE_JQUERY: true
+      }
+    script(src='/javascripts/lib/jquery-2.0.2.js')
+    script(src='/javascripts/lib/handlebars-rc4.js')
+    script(src='/javascripts/lib/bootstrap.js')
+    script(src='/javascripts/lib/ember-1.0.0-rc.5.js')
+    script(src='/javascripts/lib/ember-data-latest.js')
+
+    script(src='/javascripts/application.js')
+    script(src='/javascripts/router.js')
