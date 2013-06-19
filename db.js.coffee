@@ -11,10 +11,17 @@ User = new Schema
 CalendarEntry = new Schema
   user_id: ObjectId
   title: String
-  time: Date
+  date: Date
   category: String
 
-mongoose.model( 'User', User )
-mongoose.model( 'CalendarEntry', CalendarEntry )
+exports.models =
+  User: mongoose.model( 'User', User )
+  CalendarEntry: mongoose.model( 'CalendarEntry', CalendarEntry )
 
 mongoose.connect("mongodb://localhost:27017/" + config.database.name)
+
+exports.mongoose = mongoose
+
+# redis
+redis = require("redis")
+exports.redisClient = redis.createClient(null, null, {detect_buffers: true});

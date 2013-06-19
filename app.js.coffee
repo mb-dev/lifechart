@@ -21,13 +21,15 @@ app.use(express.methodOverride())
 app.use(express.cookieParser());
 app.use(express.session({secret: '1234567890QWERTY'}));
 app.use(app.router)
+app.use(require('connect-assets')())
 app.use(express.static(path.join(__dirname, 'public')))
 
 if ('development' == app.get('env'))
   app.use(express.errorHandler())
 
 app.get('/', indexRoute.index)
-app.get('/events', indexRoute.events)
+app.get('/events', indexRoute.getAll)
+app.get('/sync', indexRoute.sync)
 app.get('/users', userRoute.list)
 app.get('/auth', userRoute.auth)
 app.get('/oauth2callback', userRoute.authcallback)

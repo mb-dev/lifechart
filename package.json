@@ -11,6 +11,12 @@
     "googleapis": "*",
     "nodemon": "*",
     "jade": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+    "connect-assets": "*",
+    "redis": "*",
+    "hiredis": "*",
+    "async": "*",
+    "moment": "*"
+
   }
 }
