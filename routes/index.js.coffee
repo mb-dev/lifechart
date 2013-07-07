@@ -2,6 +2,7 @@ config = require('../settings')
 google_calendar = require('../calendar-api.js.coffee')
 db = require('../db.js.coffee')
 async = require('async')
+moment = require('moment')
 
 exports.index = (req, res) =>
 #  ul
@@ -24,15 +25,34 @@ exports.sync = (req, res) =>
       callback(null)
       return
 
+    console.log(item.start)
+    console.log(item.end)
+
     item = new db.models.CalendarEntry
       user_id: null,
       title: item.summary
-      date: (item.start.datetime || item.start.date)
+      start: (item.start.dateTime || item.start.date)
+      end: (item.end.dateTime || item.end.date)
       category: null
 
     item.save (err) =>
       callback(err)
 
+  getAllEvents = (auth_token, callback) ->
+    eventsResult = []
+    nextPageToken = null
+
+    async.doWhilst(
+      (callback) =>
+        google_calendar.getCalendarItems auth_token, nextPageToken, config.global.main_calendar, (err, result) =>
+          eventsResult = eventsResult.concat(result.items)
+          nextPageToken = result.nextPageToken
+          callback(err)
+      , () =>
+        nextPageToken?
+      , (err) =>
+        callback(err, eventsResult)
+    )
   async.waterfall [
     (callback) =>
       db.models.CalendarEntry.remove (err) ->
@@ -41,22 +61,33 @@ exports.sync = (req, res) =>
       db.redisClient.get 'auth_token', (err, auth_token) ->
         callback(err, JSON.parse(auth_token))
     (auth_token, callback) ->
-      google_calendar.getCalendarItems auth_token, config.global.main_calendar, (err, result) ->
-        callback(err, result)
+      getAllEvents(auth_token, callback)
     ], (err, result) =>
-      eventList = if result && result.items then result.items else []
+      eventList = result
 
       async.each eventList, insertIntoDatabase, (err) =>
         res.redirect('/')
 
+exports.putEvent = (req, res) =>
+  db.models.CalendarEntry.findById req.params.id, (err, calendarEntry) =>
+    calendarEntry.category = req.body.event.category
+    calendarEntry.save (err) =>
+      res.json
+        event: db.calendarEntryToJson(calendarEntry)
+  
+
 exports.getAll = (req, res) =>
   toJsonObject = (item, callback) ->
-    callback(null, {
-      title: item.title,
-      date: item.date
-    })
+    callback(null, db.calendarEntryToJson(item))
 
-  db.models.CalendarEntry.find({}).exec (err, calendarEntries) =>
+  params = {}
+  if req.query.month && req.query.year
+    beginningTime = moment([req.query.year, req.query.month]).startOf('month')
+    endTime = moment([req.query.year, req.query.month]).endOf('month')
+    
+    params['start'] = { $lt: endTime, $gt: beginningTime }
+
+  db.models.CalendarEntry.find(params).exec (err, calendarEntries) =>
     async.map calendarEntries, toJsonObject, (err, results) ->
       res.json
         events: results

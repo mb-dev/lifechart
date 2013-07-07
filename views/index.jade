@@ -7,8 +7,21 @@ block content
    Sync
 
   script(type="text/x-handlebars", data-template-name="index").
-    {{#each controller}}
-      <li>
-        {{title}}
-      </li>
-    {{/each}}
+    <a {{action 'prevMonth'}} class="btn">Prev Month</a>
+    <a {{action 'nextMonth'}} class="btn">Next Month</a>
+    <ul class="items">
+      {{#each controller}}
+        <li>
+          {{title}}
+
+          {{#if category}}
+            <span class="category">{{category}}</span>
+            (<a {{action 'changeCategory' this}}>Change</a>)
+          {{else}}
+            <a {{action 'select' 'Friends' this}} class="btn btn-small">Friends</a>
+            <a {{action 'select' 'Hiking' this}} class="btn btn-small">Hiking</a>
+            <a {{action 'select' 'Workout' this}} class="btn btn-small">Workout</a>
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>

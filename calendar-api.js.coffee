@@ -29,7 +29,7 @@ exports.getCalendarList = (auth_token, callback) =>
     client.calendar.calendarList.list().withAuthClient(oauth2Client).execute (err, result) =>
       callback(null, result)
 
-exports.getCalendarItems = (auth_token, calendarId, callback) =>
+exports.getCalendarItems = (auth_token, pageToken, calendarId, callback) =>
   if !auth_token
     callback(null, [])
     return
@@ -38,10 +38,16 @@ exports.getCalendarItems = (auth_token, calendarId, callback) =>
     oauth2Client = new OAuth2Client(config.google.CLIENT_ID, config.google.CLIENT_SECRET, config.global.redirect_url)
     oauth2Client.credentials = auth_token
 
-    timeMin = moment().startOf('month').toDate().toISOString()
+    #timeMin = moment().startOf('month').toDate().toISOString()
 
-    console.log(timeMin)
+    params = {calendarId: calendarId}
+    params['pageToken'] = pageToken if pageToken
 
-    client.calendar.events.list({calendarId: calendarId, timeMin: timeMin}).withAuthClient(oauth2Client).execute (err, result) =>
+    console.log('marking request')
+    console.log(params)
+
+    client.calendar.events.list(params).withAuthClient(oauth2Client).execute (err, result) =>
       console.log(err) if err
+      console.log('results:')
+      console.log(result.items.length)
       callback(err, result)

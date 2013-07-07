@@ -4,6 +4,7 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    !=css('style')
   body
     block content
     script
@@ -15,9 +16,11 @@ html
     script(src='/javascripts/lib/bootstrap.js')
     script(src='/javascripts/lib/ember-1.0.0-rc.5.js')
     script(src='/javascripts/lib/ember-data-latest.js')
+    script(src='/javascripts/lib/moment.js')
 
     != js('application')
     != js('router')
 
+    != js('controllers/index')
     != js('models/event')
     != js('models/store')

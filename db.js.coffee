@@ -11,7 +11,8 @@ User = new Schema
 CalendarEntry = new Schema
   user_id: ObjectId
   title: String
-  date: Date
+  start: Date
+  end: Date
   category: String
 
 exports.models =
@@ -25,3 +26,11 @@ exports.mongoose = mongoose
 # redis
 redis = require("redis")
 exports.redisClient = redis.createClient(null, null, {detect_buffers: true});
+exports.calendarEntryToJson = (item) ->
+  {
+    id: item.id.toString()
+    title: item.title
+    date: item.date
+    category: item.category
+  }
+  

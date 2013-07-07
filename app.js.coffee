@@ -20,6 +20,7 @@ app.use(express.bodyParser())
 app.use(express.methodOverride())
 app.use(express.cookieParser());
 app.use(express.session({secret: '1234567890QWERTY'}));
+app.use(express.logger());
 app.use(app.router)
 app.use(require('connect-assets')())
 app.use(express.static(path.join(__dirname, 'public')))
@@ -29,6 +30,7 @@ if ('development' == app.get('env'))
 
 app.get('/', indexRoute.index)
 app.get('/events', indexRoute.getAll)
+app.put('/events/:id', indexRoute.putEvent)
 app.get('/sync', indexRoute.sync)
 app.get('/users', userRoute.list)
 app.get('/auth', userRoute.auth)

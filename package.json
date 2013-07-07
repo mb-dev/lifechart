@@ -16,6 +16,8 @@
     "redis": "*",
     "hiredis": "*",
     "async": "*",
+    "stylus": "*",
+    "nib": "*",
     "moment": "*"
 
   }
