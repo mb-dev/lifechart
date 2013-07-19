@@ -6,11 +6,15 @@ block content
   a.btn.btn-primary(href='/sync').
    Sync
 
+  script(type="text/javascript")
+    window.categories = !{JSON.stringify(categories)}
+
   script(type="text/x-handlebars", data-template-name="index").
     <a {{action 'prevMonth'}} class="btn">Prev Month</a>
     <a {{action 'nextMonth'}} class="btn">Next Month</a>
+    
     <ul class="items">
-      {{#each controller}}
+      {{#each model}}
         <li>
           {{title}}
 
@@ -18,9 +22,11 @@ block content
             <span class="category">{{category}}</span>
             (<a {{action 'changeCategory' this}}>Change</a>)
           {{else}}
-            <a {{action 'select' 'Friends' this}} class="btn btn-small">Friends</a>
-            <a {{action 'select' 'Hiking' this}} class="btn btn-small">Hiking</a>
-            <a {{action 'select' 'Workout' this}} class="btn btn-small">Workout</a>
+            {{#with this as event}}
+              {{#each controller.categories}}
+                <a {{action 'select' this event}} class="btn btn-small">{{this}}</a>
+              {{/each}}        
+            {{/with}}
           {{/if}}
         </li>
       {{/each}}

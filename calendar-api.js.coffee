@@ -29,7 +29,7 @@ exports.getCalendarList = (auth_token, callback) =>
     client.calendar.calendarList.list().withAuthClient(oauth2Client).execute (err, result) =>
       callback(null, result)
 
-exports.getCalendarItems = (auth_token, pageToken, calendarId, callback) =>
+exports.getCalendarItems = (auth_token, pageToken, lastSync, calendarId, callback) =>
   if !auth_token
     callback(null, [])
     return
@@ -40,14 +40,19 @@ exports.getCalendarItems = (auth_token, pageToken, calendarId, callback) =>
 
     #timeMin = moment().startOf('month').toDate().toISOString()
 
-    params = {calendarId: calendarId}
+    params = {calendarId: calendarId, maxAttendees: 1}
     params['pageToken'] = pageToken if pageToken
-
+    params['updatedMin'] = lastSync.toISOString() if lastSync
+ 
     console.log('marking request')
     console.log(params)
 
     client.calendar.events.list(params).withAuthClient(oauth2Client).execute (err, result) =>
       console.log(err) if err
       console.log('results:')
-      console.log(result.items.length)
-      callback(err, result)
+      if result.items
+        console.log(result.items.length)
+        callback(err, result)
+      else
+        console.log('no items')
+        callback(err, [])
