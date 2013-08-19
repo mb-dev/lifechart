@@ -1,0 +1,20 @@
+a(ng-click="prevMonth()") Prev Month
+a(ng-click="nextMonth()") Next Month
+div(ng-repeat='(date, eventsInDate) in eventsByDate')
+  h2 {{date}}
+  table.items
+    tr(ng-repeat='event in eventsInDate')
+      td.time
+        {{timeOf(event)}}
+      td.title
+        {{event.title}}
+      td.hours
+        {{event.hours}}
+      td.category
+        span(ng-if='hasCategory(event)')
+          {{event.category}}
+          a(ng-click='selectCategory(event, null)')
+            | (Change)
+        span(ng-if='!hasCategory(event)')
+          a.btn.btn-small.btn-default(ng-repeat='category in categories', ng-click='selectCategory(event, category)')
+            {{category}}

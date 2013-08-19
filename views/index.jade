@@ -1,38 +1,7 @@
 extends layout
 
 block content
-  
+  div(ng-view=true)
 
   script(type="text/javascript")
     window.categories = !{JSON.stringify(categories)}
-
-  script(type="text/x-handlebars", data-template-name="index").
-    <div>
-      <a {{action 'prevMonth'}}>Prev Month</a>
-      |
-      <a {{action 'nextMonth'}}>Next Month</a>
-      
-      {{#key_value contentByDate}}
-        <h2>{{key}}</h2>
-        <table class="items">
-          {{#each value}}
-            <tr>
-              <td class="title">{{hours}}</td>
-              <td class="title">{{title}}</td>
-              <td>
-              {{#if category}}
-                <span class="category">{{category}}</span>
-                (<a {{action 'changeCategory' this}}>Change</a>)
-              {{else}}
-                {{#with this as event}}
-                  {{#each controller.categories}}
-                    <a {{action 'select' this event}} class="btn btn-small btn-default">{{this}}</a>
-                  {{/each}}        
-                {{/with}}
-              {{/if}}
-              </td>
-            </tr>
-          {{/each}}
-        </table>
-      {{/key_value}}
-    </div>

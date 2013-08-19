@@ -1,5 +1,5 @@
 doctype 5
-html
+html('ng-app'='lifechart')
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/bootstrap.css')
@@ -22,16 +22,16 @@ html
         FORCE_JQUERY: true
       }
     script(src='/javascripts/lib/jquery-2.0.2.js')
-    script(src='/javascripts/lib/handlebars-rc4.js')
     script(src='/javascripts/lib/bootstrap.js')
-    script(src='/javascripts/lib/ember-1.0.0-rc.5.js')
-    script(src='/javascripts/lib/ember-data-latest.js')
+    script(src='/javascripts/lib/angular.js')
+    script(src='/javascripts/lib/angular-resource.js')
+    script(src='/javascripts/lib/angular-route.js')
     script(src='/javascripts/lib/moment.js')
+    script(src='/javascripts/lib/underscore.js')
 
     != js('application')
-    != js('router')
-    != js('lib/handlebars-helpers')
 
-    != js('controllers/index')
-    != js('models/event')
-    != js('models/store')
+    != js('controllers')
+    != js('directives')
+    != js('filters')
+    != js('services')

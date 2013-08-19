@@ -4,6 +4,7 @@ config = require('./settings')
 express = require('express')
 indexRoute = require('./routes/index.js.coffee')
 userRoute = require('./routes/user.js.coffee')
+partialsRoute = require('./routes/partials.js.coffee')
 http = require('http')
 path = require('path')
 
@@ -35,6 +36,7 @@ app.get('/sync', indexRoute.sync)
 app.get('/users', userRoute.list)
 app.get('/auth', userRoute.auth)
 app.get('/oauth2callback', userRoute.authcallback)
+app.get('/partials/:filename', partialsRoute.partials)
 
 http.createServer(app).listen(app.get('port'), =>
   console.log('Express server listening on port ' + app.get('port'))

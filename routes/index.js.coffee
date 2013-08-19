@@ -84,13 +84,12 @@ exports.sync = (req, res) =>
 
 exports.putEvent = (req, res) =>
   db.models.CalendarEntry.findById req.params.id, (err, calendarEntry) =>
-    console.log("Updating " + req.params.id.toString() + " to category: " + req.body.event.category)
+    console.log("Updating " + req.params.id.toString() + " to category: " + req.body.category)
     console.log(calendarEntry)
-    calendarEntry.category = req.body.event.category
+    calendarEntry.category = req.body.category
     calendarEntry.save (err) =>
       console.log('success')
-      res.json
-        event: db.calendarEntryToJson(calendarEntry)
+      res.json db.calendarEntryToJson(calendarEntry)
   
 
 exports.getAll = (req, res) =>
@@ -106,5 +105,4 @@ exports.getAll = (req, res) =>
 
   db.models.CalendarEntry.find(params).exec (err, calendarEntries) =>
     async.map calendarEntries, toJsonObject, (err, results) ->
-      res.json
-        events: results
+      res.json results
