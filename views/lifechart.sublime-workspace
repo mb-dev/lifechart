@@ -1,0 +1,800 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sort",
+				"sortAscending"
+			],
+			[
+				"find",
+				"findById"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/assets/js/router.coffee",
+			"settings":
+			{
+				"buffer_size": 1231,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/calendar-api.js.coffee",
+			"settings":
+			{
+				"buffer_size": 2180,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/assets/css/style.styl",
+			"settings":
+			{
+				"buffer_size": 126,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/assets/js/application.coffee",
+			"settings":
+			{
+				"buffer_size": 201,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/routes/index.js.coffee",
+			"settings":
+			{
+				"buffer_size": 3507,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/assets/js/models/event.coffee",
+			"settings":
+			{
+				"buffer_size": 132,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/db.js.coffee",
+			"settings":
+			{
+				"buffer_size": 1176,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/assets/js/controllers/index.coffee",
+			"settings":
+			{
+				"buffer_size": 688,
+				"line_ending": "Unix",
+				"name": "App.IndexController = Ember.ArrayController.Extend"
+			}
+		},
+		{
+			"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/settings.js",
+			"settings":
+			{
+				"buffer_size": 521,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/moshebergman/Library/Application Support/Sublime Text 3/Packages/SideBarEnhancements/CHANGELOG",
+			"settings":
+			{
+				"buffer_size": 6274,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/.nodemonignore",
+			"settings":
+			{
+				"buffer_size": 41,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.jade",
+			"settings":
+			{
+				"buffer_size": 952,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "layout.jade",
+			"settings":
+			{
+				"buffer_size": 1009,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 47.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib2,os; pf='Package Control.sublime-package'; ipp=sublime.installed_packages_path(); os.makedirs(ipp) if not os.path.exists(ipp) else None; urllib2.install_opener(urllib2.build_opener(urllib2.ProxyHandler())); open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read()); print 'Please restart Sublime Text to finish installation'"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/views/layout.jade",
+		"/Users/moshebergman/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/views/index.jade",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/.nodemonignore",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/assets/css/style.styl",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/package.json",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/assets/js/controllers/index.coffee",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/public/stylesheets/style.css",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/calendar-api.js.coffee",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/public/javascripts/lib/ember-1.0.0-rc.5.js",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/assets/js/models/event.coffee",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/assets/js/router.coffee",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/app.js.coffee",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/db.js.coffee",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/routes/index.js.coffee",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/public/javascripts/lib/ember-data-latest.js",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/assets/css/style.scss",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/public/javascripts/lib/moment.js",
+		"/Users/moshebergman/Documents/mbdev/sites/lifechart/node_modules/async/lib/async.js",
+		"/Users/moshebergman/Documents/mbdev/sites/financeRails-chef/site-cookbooks/financeRails/recipes/default.rb",
+		"/Users/moshebergman/Documents/mbdev/sites/financeRails-chef/Cheffile",
+		"/Users/moshebergman/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/moshebergman/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"=",
+			"isDirty",
+			"delete line"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 11,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/assets/js/router.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1231,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1230,
+								1230
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/calendar-api.js.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2180,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2178,
+								2178
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 85.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/assets/css/style.styl",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 126,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22,
+								22
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Stylus/Stylus.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/assets/js/application.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 201,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								65,
+								65
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/routes/index.js.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3507,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2400,
+								2402
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 850.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/assets/js/models/event.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 132,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								100,
+								100
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/db.js.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1176,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								216,
+								224
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/assets/js/controllers/index.coffee",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 688,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								82,
+								105
+							]
+						],
+						"settings":
+						{
+							"auto_name": "App.IndexController = Ember.ArrayController.Extend",
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/settings.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 521,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								303,
+								303
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/Users/moshebergman/Library/Application Support/Sublime Text 3/Packages/SideBarEnhancements/CHANGELOG",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6274,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/Users/moshebergman/Documents/mbdev/sites/lifechart/.nodemonignore",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 41,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "index.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 952,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								250,
+								250
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "layout.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1009,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								462,
+								462
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"project": "lifechart.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"views/layout.jade"
+			],
+			[
+				"layout",
+				"views/layout.jade"
+			],
+			[
+				"lay",
+				"views/layout.jade"
+			],
+			[
+				"index.",
+				"views/index.jade"
+			],
+			[
+				"index",
+				"routes/index.js.coffee"
+			],
+			[
+				"inde",
+				"views/index.jade"
+			],
+			[
+				"setti",
+				"settings.js"
+			],
+			[
+				"index.jade",
+				"views/index.jade"
+			],
+			[
+				"app",
+				"app.js.coffee"
+			],
+			[
+				"db",
+				"db.js.coffee"
+			],
+			[
+				"sett",
+				"settings.js"
+			],
+			[
+				"rout",
+				"assets/js/router.coffee"
+			],
+			[
+				"layou",
+				"views/layout.jade"
+			],
+			[
+				"ind",
+				"views/index.jade"
+			],
+			[
+				"ember",
+				"public/javascripts/lib/ember-data-latest.js"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"styl",
+				"public/stylesheets/style.css"
+			],
+			[
+				"pac",
+				"package.json"
+			],
+			[
+				"async",
+				"node_modules/async/lib/async.js"
+			],
+			[
+				"user.rb",
+				"app/models/user.rb"
+			],
+			[
+				"investment_a",
+				"app/controllers/investment_assets_controller.rb"
+			],
+			[
+				"investment_ass",
+				"app/models/investment_asset.rb"
+			],
+			[
+				"investment_hel",
+				"app/helpers/investment_helper.rb"
+			],
+			[
+				"_tile",
+				"app/views/investment/_tile_investment_asset.html.haml"
+			],
+			[
+				"investmentass",
+				"app/models/investment_asset.rb"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"investment_con",
+				"app/controllers/investment_controller.rb"
+			],
+			[
+				"investment_plan_con",
+				"app/controllers/investment_plans_controller.rb"
+			],
+			[
+				"inves",
+				"app/controllers/investment_controller.rb"
+			],
+			[
+				"_form",
+				"app/views/investment_assets/_form.html.haml"
+			],
+			[
+				"line_items_co",
+				"app/controllers/line_items_controller.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 47.0,
+		"selected_items":
+		[
+			[
+				"calendarEntryToJson",
+				"exports.calendarEntryToJson"
+			]
+		],
+		"width": 892.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 245.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

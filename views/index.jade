@@ -1,33 +1,38 @@
 extends layout
 
 block content
-  a.btn.btn-primary(href='/auth').
-   Authenticate with Google
-  a.btn.btn-primary(href='/sync').
-   Sync
+  
 
   script(type="text/javascript")
     window.categories = !{JSON.stringify(categories)}
 
   script(type="text/x-handlebars", data-template-name="index").
-    <a {{action 'prevMonth'}} class="btn">Prev Month</a>
-    <a {{action 'nextMonth'}} class="btn">Next Month</a>
-    
-    <ul class="items">
-      {{#each model}}
-        <li>
-          {{title}}
-
-          {{#if category}}
-            <span class="category">{{category}}</span>
-            (<a {{action 'changeCategory' this}}>Change</a>)
-          {{else}}
-            {{#with this as event}}
-              {{#each controller.categories}}
-                <a {{action 'select' this event}} class="btn btn-small">{{this}}</a>
-              {{/each}}        
-            {{/with}}
-          {{/if}}
-        </li>
-      {{/each}}
-    </ul>
+    <div>
+      <a {{action 'prevMonth'}}>Prev Month</a>
+      |
+      <a {{action 'nextMonth'}}>Next Month</a>
+      
+      {{#key_value contentByDate}}
+        <h2>{{key}}</h2>
+        <table class="items">
+          {{#each value}}
+            <tr>
+              <td class="title">{{hours}}</td>
+              <td class="title">{{title}}</td>
+              <td>
+              {{#if category}}
+                <span class="category">{{category}}</span>
+                (<a {{action 'changeCategory' this}}>Change</a>)
+              {{else}}
+                {{#with this as event}}
+                  {{#each controller.categories}}
+                    <a {{action 'select' this event}} class="btn btn-small btn-default">{{this}}</a>
+                  {{/each}}        
+                {{/with}}
+              {{/if}}
+              </td>
+            </tr>
+          {{/each}}
+        </table>
+      {{/key_value}}
+    </div>
